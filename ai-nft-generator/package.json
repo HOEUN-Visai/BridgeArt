@@ -7,6 +7,7 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "ai-nft-generator": "file:",
     "express": "^4.18.2"
   }
-} 
+}

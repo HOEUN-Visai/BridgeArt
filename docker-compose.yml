@@ -2,14 +2,15 @@ version: '3.8'
 services:
   frontend:
     build:
-      context: .
-      dockerfile: docker/frontend.dockerfile
+      context: ./frontend
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
     depends_on:
       - backend
     environment:
       - NEXT_PUBLIC_API_URL=http://backend:4000
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
     networks:
       - bridge_network
 
